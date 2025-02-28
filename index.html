@@ -1,186 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra y Venta de Oro</title>
+    <title>Oro Forte</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        :root {
-            --primary-color: #d4af37;
-            --secondary-color: #8c6c1d;
-            --background-color: #1c1c1c;
-            --text-color: #fff;
-            --nav-background: #111;
-            --section-background: #222;
-            --input-background: #333;
-            --button-hover: #b28e30;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            background: var(--nav-background);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 18px;
-            padding: 15px;
-            display: inline-block;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background: var(--section-background);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(218, 200, 142, 0.4);
-            text-align: center;
-        }
-        h2 {
-            color: var(--primary-color);
-            font-size: 26px;
-        }
-        .image-container {
-            width: 100%;
-            max-height: 250px;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-            border-radius: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        input, textarea {
-            padding: 12px;
-            border: 1px solid var(--primary-color);
-            border-radius: 8px;
-            background: var(--input-background);
-            color: var(--text-color);
-            font-size: 16px;
-        }
-        button {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-color);
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: var(--button-hover);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: var(--nav-background);
-            color: var(--text-color);
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        Compra y Venta de Oro
-    </header>
     <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+
+        <div class="nombre">
+            <h1>Oro Forte</h1>
+        </div>
+        
+        <div class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Ubicación</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+        
     </nav>
-    
-    <section id="inicio">
-        <div class="image-container">
-            <img src="gold-banner.jpg" alt="">
+    <section class="inicio">
+        <div>
+            <h4>Valor real, confianza total</h4>
         </div>
-        <h2>Bienvenidos</h2>
-        <p>Somos líderes en la compra y venta de oro con total transparencia y seguridad.</p>
+        <div>
+            <h1>Bienvenid@s a Oro Forte</h1>
+        </div>
+        <div>
+            <button>Contáctanos</button>
+        </div>
+        
     </section>
-
-    <section id="nosotros">
-        <div class="image-container">
-            <img src="gold-trade.jpg" alt="">
-        </div>
-        <h2>Sobre Nosotros</h2>
-        <p>Con años de experiencia en el mercado, garantizamos confianza y el mejor precio del mercado.</p>
-    </section>
-
-    <section id="servicios">
-        <div class="image-container">
-            <img src="gold-services.jpg" alt="">
-        </div>
+    <section>
         <h2>Nuestros Servicios</h2>
-        <p>Ofrecemos compra de oro al mejor precio y venta con garantía de calidad.</p>
+        <div>
+            <img src="" alt="">
+            <h3>Compra de Oro</h3>
+            <p>Compramos oro en cualquier presentación, incluyendo joyas, mina, aluvial y chatarra, garantizando una evaluación justa y pagos seguros. Obtén la mejor oferta con nuestro servicio confiable y transparente.</p>
+        </div>
+        <div>
+            <img src="" alt="">
+            <h3>Tasacion profesional</h3>
+            <p>Realizamos tasaciones profesionales con tecnología avanzada, garantizando precisión y transparencia en la valoración de tus activos.</p>
+        </div>
+        <div>
+            <img src="" alt="">
+            <h3>Asesoria</h3>
+            <p>Ofrecemos asesoría experta en inversiones en oro, ayudándote a maximizar tu rentabilidad con estrategias seguras y personalizadas.</p>
+        </div>
     </section>
-
-    <section id="ubicacion">
-        <h2>Ubicación</h2>
-        <p>Nos encontramos en el centro de la ciudad. Visítanos.</p>
-        <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+    <section>
+       <h2>Sobre nosotros</h2> 
+       <p>
+        En Oro Forte, convertimos el oro en oportunidades con un servicio confiable, discreto y seguro. Nos especializamos en la compraventa de oro en todas sus formas: joyas, mina, aluvial y chatarra, combinando experiencia con tecnología de punta para garantizar tasaciones precisas y pagos justos. Aunque somos una empresa joven, nuestro equipo cuenta con años de trayectoria en el sector, brindando confianza y transparencia a cada cliente. Nos diferenciamos por nuestro enfoque en la seguridad y la precisión, asegurando una experiencia sin preocupaciones. Oro Forte: donde el valor de tu oro brilla con confianza.
+       </p>
     </section>
-
-    <section id="contacto">
+    <section>
+        <h2>Ubicacion</h2>
+        <p>Estamos ubicados en la ciudad de Medellin, </p>
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.609699863075!2d-75.56697232509595!3d6.208274726078393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46827f7f142bfb%3A0x1715a246b26c9c3c!2sEl%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1708567823456" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    </section>
+    <section>
         <h2>Contacto</h2>
-        <p>Teléfono: +57 300 123 4567</p>
-        <p>Email: info@comprayventaoro.com</p>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <h4>Correo: asdfasdfgdffg</h4>
+        <h4>Whatsapp: 22222222222</h4>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Compra y Venta de Oro. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
