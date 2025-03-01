@@ -3,14 +3,20 @@
   --color-negro: #000000;
   --color-gris: #C0C0C0;
   --color-fondo: #111;
-  --color-blanco: #EAEAEA;
+  --color-blanco: #dddcdc;
   --font-principal: 'Poppins', sans-serif;
   
 }
 html {
-  font-family: montserrat, sans-serif;;
+  font-family: Segoe UI;
 }
+
+body {
+  margin: 0;
+}
+
 /*nav bar stilos*/
+
 nav {
   color: var(--color-negro);
 	display: flex;
@@ -18,6 +24,7 @@ nav {
 	align-items: center;
   padding: 10px 20px;
   background-color: var(--color-5);
+  height: 40px;
 }
 
 .logo img {
@@ -27,6 +34,7 @@ nav {
 
 .nombre {
   margin-left: 10px;
+  font-family: montserrat, sans-serif;
 }
 
 .menu {
@@ -42,6 +50,7 @@ nav {
 
 .menu ul li {
   margin: 0 15px;
+  padding: 5px;
 }
 
 .menu ul li a {
@@ -51,26 +60,26 @@ nav {
 }
 
 /*section inicio*/
-section {
- 
-}
+
 .inicio {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url("imagenes/fondo.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(118, 128, 144);
   background-position: center;
   height: 1000px;
+  margin: 0;
   z-index: 1;
 }
+
 .inicio::after {
   content: "";
   position: absolute;
@@ -95,3 +104,39 @@ section {
   color: var(--color-negro);
 }
 
+/* seccion servicios */
+
+.servicios h2 {
+  margin: 0;
+
+  font-size: 36px;
+}
+
+.servicios h4{
+  margin-top: 0;
+}
+
+.servicios {
+  background-color: rgb(28, 28, 28);
+  color: var(--color-blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 620px;
+  padding: 75px 0px 75px 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 535px;
+}
+
+.container img{
+  width: 250px;
+  height: 250px;
+}
