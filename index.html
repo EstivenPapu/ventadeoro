@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oro Forte</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-
         <div class="nombre">
             <h1>Oro Forte</h1>
         </div>
         
-        <div class="menu">
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776;
+        </div>
+        <div class="menu" id="menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Ubicación</a></li>
-                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>    
     </nav>
 
-    <section class="inicio">
+    <section class="inicio" id="inicio">
         <div>
             <h4>Valor real, confianza total</h4>
         </div>
@@ -39,7 +38,7 @@
         </div>
     </section>
 
-    <section class="servicios">
+    <section class="servicios" id="servicios">
         <h2>Nuestros Servicios</h2>
         <h4>Adaptamos nuestras ofertas a tus necesidades específicas para brindarte la mejor experiencia.</h4>
 
@@ -62,30 +61,37 @@
         </div>    
     </section>
     
-    <section>
-        <h2>Sobre nosotros</h2> 
-        <p>
-         En Oro Forte, convertimos el oro en oportunidades con un servicio confiable, discreto y seguro. Nos especializamos en la compraventa de oro en todas sus formas: joyas, mina, aluvial y chatarra, combinando experiencia con tecnología de punta para garantizar tasaciones precisas y pagos justos. Aunque somos una empresa joven, nuestro equipo cuenta con años de trayectoria en el sector, brindando confianza y transparencia a cada cliente. Nos diferenciamos por nuestro enfoque en la seguridad y la precisión, asegurando una experiencia sin preocupaciones. Oro Forte: donde el valor de tu oro brilla con confianza.
-        </p>
+    <section class="nosotros" id="nosotros">
+        <h2>Compromiso y Confianza</h2>
+        <h4>Nuestra dedicación a la excelencia nos distingue en el mercado.</h4>
+        <div class="container">
+            <div>
+                <img src="imagenes/n1.webp" alt="Calidad Asegurada">
+                <h3>Calidad Asegurada</h3>
+                <p>Garantizamos que todos nuestros productos cumplen con los más altos estándares de calidad.</p>
+            </div>
+            <div>
+                <img src="imagenes/n2.webp" alt="Servicio al Cliente">
+                <h3>Servicio al Cliente Excepcional</h3>
+                <p>Nos enorgullecemos de ofrecer un servicio al cliente de primer nivel y atención personalizada.</p>
+            </div>
+            <div>
+                <img src="imagenes/n3.webp" alt="Precios Competitivos">
+                <h3>Precios Competitivos</h3>
+                <p>Ofrecemos precios justos y competitivos en cada transacción para asegurar la mejor oferta.</p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Ubicacion</h2>
-        <p>Estamos ubicados en la ciudad de Medellin, </p>
-        <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.609699863075!2d-75.56697232509595!3d6.208274726078393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46827f7f142bfb%3A0x1715a246b26c9c3c!2sEl%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1708567823456" 
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-    </section>
-    <section>
-        <h2>Contacto</h2>
-        <h4>Correo: asdfasdfgdffg</h4>
-        <h4>Whatsapp: 22222222222</h4>
+    <section class="contacto" id="contacto">
+        <div class="informacion">
+            <h2>Contacto</h2>
+            <h4>Correo: asdfasdfgdffg</h4>
+            <h4>Whatsapp: 22222222222</h4>
+        </div>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.609699863075!2d-75.56697232509595!3d6.208274726078393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46827f7f142bfb%3A0x1715a246b26c9c3c!2sEl%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1708567823456" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </section>
 </body>
 </html>

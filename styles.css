@@ -1,14 +1,14 @@
 :root {
   --color-dorado: #D4AF37;
-  --color-negro: #000000;
+  --color-negro: #1b1b1b;
   --color-gris: #C0C0C0;
   --color-fondo: #111;
   --color-blanco: #dddcdc;
-  --font-principal: 'Poppins', sans-serif;
   
 }
+
 html {
-  font-family: Segoe UI;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -17,51 +17,142 @@ body {
 
 /*nav bar stilos*/
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} 
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+}
+
 nav {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blanco);
   color: var(--color-negro);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  padding: 10px 20px;
-  background-color: var(--color-5);
-  height: 40px;
-}
-
-.logo img {
-  width: 50px;
-  height: auto;
-}
-
-.nombre {
-  margin-left: 10px;
-  font-family: montserrat, sans-serif;
+  width: 100%;  /* Evita que el navbar se salga de la pantalla */
+  padding: 15px 20px; /* Espaciado interno */
+  z-index: 1000;
+  box-sizing: border-box; /* Evita que el padding afecte el ancho total */
 }
 
 .menu {
-  margin-left: auto;
+  display: flex;
 }
 
 .menu ul {
-  display: flex;
   list-style: none;
-  padding: 0;
+  display: flex;
+  gap: 15px;
   margin: 0;
+  padding: 0;
 }
 
-.menu ul li {
-  margin: 0 15px;
-  padding: 5px;
-}
-
-.menu ul li a {
+.menu a {
   text-decoration: none;
   color: var(--color-negro);
-  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🟢 Estilos del icono hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* 🎯 RESPONSIVE: Menú hamburguesa en móviles */
+@media (max-width: 768px) {
+  .menu {
+      position: absolute;
+      top: 60px;
+      right: 0; 
+      background: var(--color-blanco);
+      width: 100%;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+      text-align: right; /* Alinea el texto del menú a la derecha */
+  }
+
+  .menu-toggle {
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .menu.active {
+    animation: slideIn 0.4s forwards;
+  }
+
+  .menu[hidden] {
+      display: none;
+      animation: slideOut 0.4s forwards;
+  }
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-dorado);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: var(--color-dorado);
+}
+
+.menu a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* 🔴 Animación del icono hamburguesa */
+.menu-toggle.active {
+  transform: rotate(90deg);
 }
 
 /*section inicio*/
 
 .inicio {
+  margin-top: 110px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -103,40 +194,175 @@ nav {
   background-color: var(--color-blanco);
   color: var(--color-negro);
 }
-
-/* seccion servicios */
+/* Estilos generales de la sección */
+.servicios {
+  background-color: #1C1C1C;
+  color: #ffffff;
+  padding: 75px 75px;
+  text-align: center;
+}
 
 .servicios h2 {
-  margin: 0;
-
   font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.servicios h4{
-  margin-top: 0;
+.servicios h4 {
+  font-size: 20px;
+  font-weight: normal;
+  max-width: 700px;
+  margin: 0 auto 40px;
 }
 
-.servicios {
-  background-color: rgb(28, 28, 28);
-  color: var(--color-blanco);
+/* Contenedor de los servicios */
+.servicios .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 620px;
-  padding: 75px 0px 75px 0;
-}
-
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 30px;
-  width: 535px;
+  flex-wrap: wrap;  /* Permite que los divs bajen en pantallas pequeñas */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.container img{
-  width: 250px;
-  height: 250px;
+/* Estilos de cada tarjeta */
+.servicios .container div {
+  background-color: #292929;
+  padding: 20px;
+  width: calc(33.33% - 20px); /* Hace que haya 3 columnas en escritorio */
+  min-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box; /* Evita problemas con el padding */
+}
+
+.servicios .container div:hover {
+  transform: translateY(-10px);
+}
+
+/* Estilos de las imágenes */
+.servicios .container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+}
+
+/* Títulos de los servicios */
+.servicios .container h3 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+/* Descripción de los servicios */
+.servicios .container p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* RESPONSIVE: Ajuste para pantallas más pequeñas */
+@media (max-width: 1000px) {
+  .servicios .container div {
+    width: 48%; /* Se acomodan en 2 columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios .container {
+    flex-direction: column; /* Se ponen en una sola columna */
+    align-items: center;
+  }
+
+  .servicios .container div {
+    width: 60%; /* Ocuparán casi todo el ancho */
+  }
+}
+
+/*nosotros*/
+
+.nosotros {
+  background-color: #1C1C1C;
+  color: #ffffff;
+  padding: 75px 75px;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.nosotros h4 {
+  font-size: 20px;
+  font-weight: normal;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* Contenedor de los servicios */
+.nosotros .container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;  /* Permite que los divs bajen en pantallas pequeñas */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos de cada tarjeta */
+.nosotros .container div {
+  background-color: #292929;
+  padding: 20px;
+  width: calc(33.33% - 20px); /* Hace que haya 3 columnas en escritorio */
+  min-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box; /* Evita problemas con el padding */
+}
+
+.nosotros .container div:hover {
+  transform: translateY(-10px);
+}
+
+/* Estilos de las imágenes */
+.nosotros .container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+}
+
+/* Títulos de los servicios */
+.nosotros .container h3 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+/* Descripción de los servicios */
+.nosotros .container p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* RESPONSIVE: Ajuste para pantallas más pequeñas */
+@media (max-width: 1000px) {
+  .nosotros .container div {
+    width: 48%; /* Se acomodan en 2 columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros .container {
+    flex-direction: column; /* Se ponen en una sola columna */
+    align-items: center;
+  }
+
+  .nosotros .container div {
+    width: 60%; /* Ocuparán casi todo el ancho */
+  }
 }
