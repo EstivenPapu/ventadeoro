@@ -23,28 +23,6 @@ body {
   padding: 0;
 } 
 
-@keyframes slideIn {
-  from {
-      transform: translateY(-100%);
-      opacity: 0;
-  }
-  to {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
-@keyframes slideOut {
-  from {
-      transform: translateY(0);
-      opacity: 1;
-  }
-  to {
-      transform: translateY(-100%);
-      opacity: 0;
-  }
-}
-
 nav {
   text-align: center;
   position: fixed;
@@ -76,77 +54,6 @@ nav {
 .menu a {
   text-decoration: none;
   color: var(--color-negro);
-  transition: color 0.3s ease-in-out;
-}
-
-/* 🟢 Estilos del icono hamburguesa */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-
-/* 🎯 RESPONSIVE: Menú hamburguesa en móviles */
-@media (max-width: 768px) {
-  .menu {
-      position: absolute;
-      top: 60px;
-      right: 0; 
-      background: var(--color-blanco);
-      width: 100%;
-      padding: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  }
-
-  .menu ul {
-      flex-direction: column;
-      gap: 10px;
-      text-align: right; /* Alinea el texto del menú a la derecha */
-  }
-
-  .menu-toggle {
-      display: block;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-  }
-
-  .menu.active {
-    animation: slideIn 0.4s forwards;
-  }
-
-  .menu[hidden] {
-      display: none;
-      animation: slideOut 0.4s forwards;
-  }
-}
-
-.menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--color-dorado);
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-
-.menu a:hover {
-  color: var(--color-dorado);
-}
-
-.menu a:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* 🔴 Animación del icono hamburguesa */
-.menu-toggle.active {
-  transform: rotate(90deg);
 }
 
 /*section inicio*/
@@ -283,7 +190,7 @@ nav {
 /*nosotros*/
 
 .nosotros {
-  background-color: #1C1C1C;
+  background-color: #292929;
   color: #ffffff;
   padding: 75px 75px;
   text-align: center;
@@ -313,7 +220,7 @@ nav {
 
 /* Estilos de cada tarjeta */
 .nosotros .container div {
-  background-color: #292929;
+  background-color: #1C1C1C;
   padding: 20px;
   width: calc(33.33% - 20px); /* Hace que haya 3 columnas en escritorio */
   min-width: 300px;
@@ -365,4 +272,73 @@ nav {
   .nosotros .container div {
     width: 60%; /* Ocuparán casi todo el ancho */
   }
+}
+
+/*seccion contacto*/
+.contacto {
+  background-color: rgb(77, 76, 76);
+  color: #ffffff;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+
+.contacto h2 {
+  font-size: 36px;
+}
+.map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:30px 30px 0px 30px;
+  background-color: #282828;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  background-color: #ffffff;
+  color: #111;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact .logo img {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.contact img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact .info {
+  display: flex;
+  gap: 50px;
+  margin: 15px 15px 15px 50px;
+}
+
+footer {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 0;
+}
+footer .redes img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
 }
