@@ -83,7 +83,6 @@ nav {
 }
 
 /*section inicio*/
-
 .inicio {
   margin-top: 110px;
   position: relative;
@@ -105,7 +104,6 @@ nav {
   z-index: 1;
   padding: 50px 50px 50px 50px;
 }
-
 
 .inicio::after {
   content: "";
@@ -163,7 +161,6 @@ nav {
   max-width: 700px;
   margin: 0 auto 40px;
 }
-
 
 /* Contenedor de los servicios */
 .servicios .container {
@@ -233,7 +230,6 @@ nav {
 }
 
 /*nosotros*/
-
 .nosotros {
   background-color: #292929;
   color: #ffffff;
@@ -402,8 +398,6 @@ nav {
       width: 40px; /* Ajusta el tamaño de los iconos */
   }
 }
-
-
 
 footer {
   background-color: #2c2c2c;
